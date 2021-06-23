@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Android 使用 http 通信</title>
+      <link href="/2021/06/23/Android-%E4%BD%BF%E7%94%A8-http-%E9%80%9A%E4%BF%A1/"/>
+      <url>/2021/06/23/Android-%E4%BD%BF%E7%94%A8-http-%E9%80%9A%E4%BF%A1/</url>
+      
+        <content type="html"><![CDATA[<p>背景：Android 9.0 之后，应用程序只允许使用 <code>https</code> 类型的网络请求，这是由于 http 存在<code>网络安全隐患</code>而默认不被支持，下面介绍如何支持使用 http。 </p><p>在res目录右击新建一个文件名为xml的文件夹（$res \rightarrow New \rightarrow Directory \rightarrow xml$）</p><p>然后在xml中新建文件，文件名文件类型为：<code>network_config.xml</code>，文件内容如下，其含义为允许我们使用明文的方式在网络上进行传输数据。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">network-security-config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base-config</span> <span class="attr">cleartextTrafficPermitted</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">trust-anchors</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">certificates</span> <span class="attr">src</span>=<span class="string">&quot;system&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">trust-anchors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">base-config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">network-security-config</span>&gt;</span></span><br></pre></td></tr></table></figure><p>然后修改<code>AndroidManifest.xml</code>中的代码以启用上述配置，添加内容为：<code>android:networkSecurityConfig=&quot;@xml/network_config&quot;。</code>添加位置如下：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line"><span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">             <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">             <span class="attr">.</span></span></span><br><span class="line"><span class="tag">             <span class="attr">.</span></span></span><br><span class="line"><span class="tag">             <span class="attr">android:networkSecurityConfig</span>=<span class="string">&quot;@xml/network_config &gt;</span></span></span><br><span class="line"><span class="string"><span class="tag">    .</span></span></span><br><span class="line"><span class="string"><span class="tag">    .</span></span></span><br><span class="line"><span class="string"><span class="tag">&lt;/application&gt;</span></span></span><br></pre></td></tr></table></figure><p>参考：</p><p>郭霖. 第一行代码 Android[M]. 第三版. 北京: 人民邮电出版社. 2020. 440-441.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2021/06/23/hello-world/"/>
       <url>/2021/06/23/hello-world/</url>
