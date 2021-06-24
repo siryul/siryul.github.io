@@ -3,17 +3,22 @@
 <html class="article-header-style-default">
 <head>
 	
-	<title>归档 : 2021/6 - siryul 的随手笔记</title>
+	<title>Android 模拟器访问开发计算机本地主机上的内容 - siryul 的随手笔记</title>
 	<meta charset="utf-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	
-	<meta property="og:type" content="website">
-<meta property="og:title" content="siryul 的随手笔记">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+	<meta name="description" content="背景在学习郭霖的《第一行代码 Android 第三版》11.3节使用OkHttp解析 本地主机上的get_data.xml文件，对代码（关键代码如下）中的 ip 地址产生的疑惑。 12val client &#x3D; OkHttpClient()val request &#x3D; Request.Builder().url(&quot;http:&#x2F;&#x2F;10.0.2.2&#x2F;get_data.xml&quot;).bui">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 模拟器访问开发计算机本地主机上的内容">
+<meta property="og:url" content="http://example.com/2021/06/24/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E5%BC%80%E5%8F%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="siryul 的随手笔记">
+<meta property="og:description" content="背景在学习郭霖的《第一行代码 Android 第三版》11.3节使用OkHttp解析 本地主机上的get_data.xml文件，对代码（关键代码如下）中的 ip 地址产生的疑惑。 12val client &#x3D; OkHttpClient()val request &#x3D; Request.Builder().url(&quot;http:&#x2F;&#x2F;10.0.2.2&#x2F;get_data.xml&quot;).bui">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-24T04:45:30.000Z">
+<meta property="article:modified_time" content="2021-06-24T05:08:29.324Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary">
 
 	<meta name="theme-color" content="#5e72e4">
@@ -430,14 +435,6 @@
 
 <div class="page-information-card-container">
 	
-		
-<div class="page-information-card card bg-gradient-secondary shadow-lg border-0">
-	<div class="card-body">
-		<h3 class="text-black">归档 : 2021/6 </h3>
-		
-	</div>
-</div>
-	
 </div>
 
 <div id="sidebar_mask"></div>
@@ -464,18 +461,39 @@
 		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
 			<div id="leftbar_part2_inner" class="card-body">
 				
-				<div class="nav-wrapper" style="padding-top: 5px; display:none; ">
+				<div class="nav-wrapper" style="padding-top: 5px;">
 	                <ul class="nav nav-pills nav-fill" role="tablist">
 						
+							<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+						
 						<li class="nav-item sidebar-tab-switcher">
-							<a class="active show" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
 						</li>
 	                </ul>
 				</div>
 				<div>
 					<div class="tab-content" style="padding: 10px 10px 0 10px;">
 						
-						<div class="tab-pane fade text-center active show" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+								
+							</div>
+						
+						<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
 							<img id="leftbar_overview_author_image" src="/assets/img/auther.jpg" class="img-fluid rounded-circle shadow-sm" style="width: 100px;" alt="avatar">
 							<h6 id="leftbar_overview_author_name">siryul 的随手笔记</h6>
 							<nav class="site-state">
@@ -576,9 +594,8 @@
 	<main id="main" class="site-main" role="main">
 		
 		
-		
-				
-	<article class="post card bg-white shadow-sm border-0 ">
+			
+	<article class="post post-full card bg-white shadow-sm border-0 ">
 	<header class="post-header text-center">
 		
 		<a class="post-title" href="/2021/06/24/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E5%BC%80%E5%8F%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%86%85%E5%AE%B9/">Android 模拟器访问开发计算机本地主机上的内容</a>
@@ -595,7 +612,7 @@
 							<div class="post-meta-devide">|</div>
 						
 						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
+							<i class="fa fa fa-book" aria-hidden="true"></i>
 							<span id="busuanzi_container_page_pv">
 								阅读<span id="busuanzi_value_page_pv"></span>次
 							</span>
@@ -621,14 +638,61 @@
 		
 	</header>
 
-	<div class="post-content">
-		
-			
-				背景在学习郭霖的《第一行代码 Android 第三版》11.3节使用OkHttp解析 本地主机上的get_data.xml文件，对代码（关键代码如下）中的 ip 地址产生的疑惑。
-12val client = OkHttpClient()val request = Request.Builder().url(&quot;http://10.0.2....
-			
-		
+	<div class="post-content" id="post_content">
+		<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在学习郭霖的《第一行代码 Android 第三版》11.3节使用<code>OkHttp</code>解析 本地主机上的<code>get_data.xml</code>文件，对代码（关键代码如下）中的 ip 地址产生的疑惑。</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> client = OkHttpClient()</span><br><span class="line"><span class="keyword">val</span> request = Request.Builder().url(<span class="string">&quot;http://10.0.2.2/get_data.xml&quot;</span>).build()</span><br></pre></td></tr></table></figure>
+
+<p>在书写时写为：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> client = OkHttpClient()</span><br><span class="line"><span class="keyword">val</span> request = Request.Builder().url(<span class="string">&quot;http://127.0.0.1/get_data.xml&quot;</span>).build()</span><br></pre></td></tr></table></figure>
+
+<p>运行时发现给出以下报错信息：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">W/System.err: java.net.ConnectException: Failed to connect to /<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">80</span></span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">W/System.err:     at okhttp3.<span class="keyword">internal</span>.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.kt:<span class="number">106</span>)</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">W/System.err:     at okhttp3.<span class="keyword">internal</span>.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:<span class="number">109</span>)</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">W/System.err:     at okhttp3.<span class="keyword">internal</span>.connection.RealCall.execute(RealCall.kt:<span class="number">154</span>)</span><br><span class="line">.</span><br><span class="line">.W/System.err:     at kotlin.concurrent.ThreadsKt$thread$thread$<span class="number">1.</span>run(Thread.kt:<span class="number">30</span>)</span><br><span class="line">    Caused <span class="keyword">by</span>: java.net.ConnectException: failed to connect to /<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> (port <span class="number">80</span>) from /<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> (port <span class="number">50104</span>) after 10000ms: isConnected failed: ECONNREFUSED (Connection refused)</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">W/System.err:     at okhttp3.<span class="keyword">internal</span>.platform.Platform.connectSocket(Platform.kt:<span class="number">120</span>)</span><br><span class="line">        at okhttp3.<span class="keyword">internal</span>.connection.RealConnection.connectSocket(RealConnection.kt:<span class="number">295</span>)</span><br><span class="line">    	... <span class="number">18</span> more</span><br><span class="line">    Caused <span class="keyword">by</span>: android.system.ErrnoException: isConnected failed: ECONNREFUSED (Connection refused)</span><br><span class="line">W/System.err:     at libcore.io.IoBridge.isConnected(IoBridge.java:<span class="number">274</span>)</span><br><span class="line">    	... <span class="number">28</span> more</span><br></pre></td></tr></table></figure>
+
+<p>关键之处便在于将 ip 地址从<code>10.0.2.2</code>改为<code>127.0.0.1</code>，从而产生报错。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>经查阅相关资料发现，模拟器的每个实例都在<strong>虚拟路由器/防火墙服务</strong>后面运行，这样便将其与开发计算机网络接口和设置以及互联网隔离开来。<code>模拟设备</code><strong>无法</strong>在网络上看到<code>开发计算机</code>或<code>其他模拟器</code>实例，而只会看到它通过以太网连接到路由器/防火墙。每个实例的虚拟路由器管理是<code>10.0.2.x/24</code>，其中<code>x</code>可变。</p>
+<p>具体的一些 ip 地址与对应说明如下表：</p>
+<table>
+<thead>
+<tr>
+<th>网络地址</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10.0.2.1</td>
+<td>路由器/网关地址</td>
+</tr>
+<tr>
+<td>10.0.2.2</td>
+<td><strong>主机回环接口</strong>的特殊别名（即，开发计算机上的 127.0.0.1）</td>
+</tr>
+<tr>
+<td>10.0.2.3</td>
+<td>第一个 DNS 服务器</td>
+</tr>
+<tr>
+<td>10.0.2.4 / 10.0.2.5 / 10.0.2.6</td>
+<td>可选的第二个、第三个和第四个 DNS 服务器（如果有）</td>
+</tr>
+<tr>
+<td>10.0.2.15</td>
+<td><strong>模拟设备</strong>网络/以太网接口</td>
+</tr>
+<tr>
+<td>127.0.0.1</td>
+<td><strong>模拟设备</strong>回环接口</td>
+</tr>
+</tbody></table>
+<p>从表中可以看出，使用<code>127.0.0.1</code>实际上对应的是<strong>模拟器</strong>本身的回环接口，要想访问<strong>开发计算机</strong>的<code>127.0.0.1</code>上的内容，需要使用<code>10.0.2.2</code>进行相关的访问。</p>
+<p>此外，<strong>模拟设备</strong>的预分配地址是 Android <strong>模拟器专用</strong>的地址，并且在<strong>真实设备</strong>上可能截然不同（它们也很可能是经过 NAT 处理的地址，具体来说，就是路由器/防火墙后面的地址）。</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/run/emulator-networking?hl=zh-cn">设置 Android 模拟器网络  | Android 开发者  | Android Developers (google.cn)</a></p>
+
 	</div>
+
+	
+
+	
 
 	
 		<div class="post-tags">
@@ -638,254 +702,134 @@
 	
 </article>
 
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/06/24/java-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/">java 的环境变量配置</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-6-24 9:08:49 | 编辑于 2021-6-24 9:47:50">2021-6-24 9:08
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							121 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				Java 的环境变量配置过程如下：
-
-下载 jdk 包，本文下载的版本为jdk 11.0.11的压缩包（jdk-11.0.11_windows-x64_bin.zip)），下载地址：Java SE Development Kit 11- - Downloads (oracle.com)。
-
-将下载好的压缩包解压至某个盘符的的某个文件夹下（路径最好不...
-			
-		
+	<div id="share_container">
+	<div id="share" data-initialized="true">
+		<a class="no-pjax icon-wechat" tooltip="分享到微信">
+			<button class="btn btn-icon btn-success">
+				<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+			<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+				豆
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+			<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+			<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+			<button class="btn btn-icon btn-warning">
+				<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=http://example.com/2021/06/24/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E5%BC%80%E5%8F%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%86%85%E5%AE%B9/&text=Android 模拟器访问开发计算机本地主机上的内容" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
 	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'Android 模拟器访问开发计算机本地主机上的内容',
+	    description : '背景在学习郭霖的《第一行代码 Android 第三版》11.3节使用OkHttp解析 本地主机上的g...',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'http://example.com/2021/06/24/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E5%BC%80%E5%8F%91%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A%E7%9A%84%E5%86%85%E5%AE%B9/'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
 
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Java/" rel="tag">Java</a>
-		</div>
-	
-</article>
+
+<div id="post_comment" class="card shadow-sm">
+	<div id="gitalk-container"></div>
+<script type="text/javascript">
+	var gitalk = new Gitalk({
+		clientID: '',
+		clientSecret: '',
+		repo: '',
+		owner: '',
+		admin: [''],
+		id: location.pathname,
+		distractionFreeMode: false
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+</div>
 
 
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="/2021/06/24/java-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/" rel="next"> java 的环境变量配置</a></div></div>
+
+
+
 		
-		<a class="post-title" href="/2021/06/23/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E7%9A%84-ip-%E5%9C%B0%E5%9D%80%E9%97%AE%E9%A2%98/">Android 模拟器访问本地主机的 ip 地址问题</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-6-23 20:55:21 | 编辑于 2021-6-23 21:20:44">2021-6-23 20:55
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							127 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
 		
-	</header>
-
-	<div class="post-content">
-		
-			
-				[TOC]
-文章背景在学习 Android 的网络通信中的 Okhttp 时，使用模拟器解析本地主机上 回环地址127.0.0.1上的 get_data.xml 文件时，原文关键代码为：
-12val client = OkHttpClient()val request = Request.Builder().url(&quot;http://10....
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Android/" rel="tag">Android</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/06/23/Android-%E4%BD%BF%E7%94%A8-http-%E9%80%9A%E4%BF%A1/">Android 使用 http 通信</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-6-23 19:51:41 | 编辑于 2021-6-23 20:17:20">2021-6-23 19:51
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							221 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				背景：Android 9.0 之后，应用程序只允许使用 https 类型的网络请求，这是由于 http 存在网络安全隐患而默认不被支持，下面介绍如何支持使用 http。 
-在res目录右击新建一个文件名为xml的文件夹（$res \rightarrow New \rightarrow Directory \rightarrow xml$）
-然后在x...
-			
-		
-	</div>
-
-	
-		<div class="post-tags">
-			<i class="fa fa-tags" aria-hidden="true"></i>
-			<a class="tag badge badge-secondary post-meta-detail-tag -none-link" href="/tags/Android/" rel="tag">Android</a>
-		</div>
-	
-</article>
-
-
-	<article class="post card bg-white shadow-sm border-0 ">
-	<header class="post-header text-center">
-		
-		<a class="post-title" href="/2021/06/23/hello-world/">Hello World</a>
-		<div class="post-meta">
-			
-						
-						<div class="post-meta-detail post-meta-detail-time">
-							<i class="fa fa-clock-o" aria-hidden="true"></i>
-							<time title="发布于 2021-6-23 19:10:57 | 编辑于 2021-6-23 19:10:57">2021-6-23 19:10
-							</time>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-book" aria-hidden="true"></i>
-							<span id="busuanzi_container_page_pv">
-								阅读<span id="busuanzi_value_page_pv"></span>次
-							</span>
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-words">
-							<i class="fa fa-file-word-o" aria-hidden="true"></i>
-							121 字
-						</div>
-					
-						
-							<div class="post-meta-devide">|</div>
-						
-						<div class="post-meta-detail post-meta-detail-readingtime">
-							<i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							1 分钟
-						</div>
-					
-		</div>
-		
-	</header>
-
-	<div class="post-content">
-		
-			
-				Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you ca...
-			
-		
-	</div>
-
-	
-</article>
-
-
-
-
-
-			
 		
 		
 
