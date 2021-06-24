@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>java 的环境变量配置</title>
+      <link href="/2021/06/24/java-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
+      <url>/2021/06/24/java-%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>Java 的环境变量配置过程如下：</p><ul><li><p>下载 jdk 包，本文下载的版本为<code>jdk 11.0.11</code>的压缩包（<code>jdk-11.0.11_windows-x64_bin.zip)</code>），下载地址：<a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html">Java SE Development Kit 11- - Downloads (oracle.com)</a>。</p></li><li><p>将下载好的压缩包解压至某个盘符的的某个文件夹下（路径最好不要出现中文），如本文解压至：<code>D:\JDK。</code></p></li><li><p>在Windows徽标上右击选择<strong>系统</strong>，向下翻点击<strong>高级系统设置</strong>，继续点击<strong>环境变量</strong>，在下面的<strong>系统变量</strong>中进行相应的设置。</p><ul><li>点击新建，变量名设为<code>JAVA_HIOME</code>，变量值为 jdk 解压缩之后的文件夹内，如本文的为：<code>D:\JDK\jdk-11.0.11</code>，点击确定。</li><li>双击<code>Path</code>，点击新建，输入的内容为：<code>%JAVA_HOME%\bin</code>，然后将其上移至第一个。</li></ul></li><li><p>验证是否环境变量设置完成，在 jdk 解压缩的盘符内的任意一个文件夹打开 cmd ，输入<code>java -version</code>，若出现版本信息则表示配置成功。</p></li></ul><p>参考：</p><p><a href="https://www.liaoxuefeng.com/wiki/1252599548343744/1280507291631649">安装JDK - 廖雪峰的官方网站 (liaoxuefeng.com)</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Android 模拟器访问本地主机的 ip 地址问题</title>
       <link href="/2021/06/23/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E7%9A%84-ip-%E5%9C%B0%E5%9D%80%E9%97%AE%E9%A2%98/"/>
       <url>/2021/06/23/Android-%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%AE%BF%E9%97%AE%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E7%9A%84-ip-%E5%9C%B0%E5%9D%80%E9%97%AE%E9%A2%98/</url>
